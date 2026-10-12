@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cmv.benchmark-runner:
+      branch: main
+      repo: https://github.com/cessda/cessda.cmv.benchmark-runner
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.cmv.benchmark-runner git:
+        commands:
+        - /usr/bin/env sh .sqa/script.avocado_audacious_toucan.sh
+        container: qc.acc_fern_generous_elephant
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.cmv.benchmark-runner find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.polar_ardent_tiger.sh
+        container: qc.doc_moss_tranquil_lionfish
+      github.com/cessda/cessda.cmv.benchmark-runner git:
+        commands:
+        - /usr/bin/env sh .sqa/script.mulberry_skeptical_gull.sh
+        container: qc.doc_cardamom_unique_albatross
+      github.com/cessda/cessda.cmv.benchmark-runner markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.mulberry_harmonious_jaguar.sh
+        container: qc.doc_jade_calm_piranha
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.cmv.benchmark-runner licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.moss_optimistic_dingo.sh
+        container: qc.lic_turquoise_daring_tapir
+  QC.Met:
+    repos:
+      github.com/cessda/cessda.cmv.benchmark-runner cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.eggplant_resilient_gorilla.sh
+        container: qc.met_pistachio_independent_wombat
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.cmv.benchmark-runner checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.wine_cheerful_marmoset.sh
+        container: qc.sty_incarnadine_industrious_hippopotamus
+      github.com/cessda/cessda.cmv.benchmark-runner hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.paprika_pensive_panda.sh
+        container: qc.sty_viridian_industrious_caiman
+      github.com/cessda/cessda.cmv.benchmark-runner jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flint_spontaneous_crocodile.sh
+        container: qc.sty_plum_content_reindeer
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.cmv.benchmark-runner get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluebell_open_crocodile.sh
+        container: qc.ver_goldenrod_adventurous_unicorn
+timeout: 5400
