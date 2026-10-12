@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.cmv.benchmark-runner git:
         commands:
-        - /usr/bin/env sh .sqa/script.avocado_audacious_toucan.sh
-        container: qc.acc_fern_generous_elephant
+        - /usr/bin/env sh .sqa/script.salmon_tactful_mongoose.sh
+        container: qc.acc_fern_decisive_uakari
   QC.Doc:
     repos:
       github.com/cessda/cessda.cmv.benchmark-runner find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.polar_ardent_tiger.sh
-        container: qc.doc_moss_tranquil_lionfish
+        - /usr/bin/env sh .sqa/script.thunder_relaxed_bullfrog.sh
+        container: qc.doc_viridian_thoughtful_peacock
       github.com/cessda/cessda.cmv.benchmark-runner git:
         commands:
-        - /usr/bin/env sh .sqa/script.mulberry_skeptical_gull.sh
-        container: qc.doc_cardamom_unique_albatross
+        - /usr/bin/env sh .sqa/script.dawn_loyal_gazelle.sh
+        container: qc.doc_brown_vigilant_narwhal
       github.com/cessda/cessda.cmv.benchmark-runner markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.mulberry_harmonious_jaguar.sh
-        container: qc.doc_jade_calm_piranha
+        - /usr/bin/env sh .sqa/script.marigold_stubborn_hornbill.sh
+        container: qc.doc_horizon_sarcastic_reindeer
   QC.Lic:
     repos:
       github.com/cessda/cessda.cmv.benchmark-runner licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.moss_optimistic_dingo.sh
-        container: qc.lic_turquoise_daring_tapir
+        - /usr/bin/env sh .sqa/script.azure_smart_griffin.sh
+        container: qc.lic_aqua_alert_finch
   QC.Met:
     repos:
       github.com/cessda/cessda.cmv.benchmark-runner cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.eggplant_resilient_gorilla.sh
-        container: qc.met_pistachio_independent_wombat
+        - /usr/bin/env sh .sqa/script.puce_responsible_capybara.sh
+        container: qc.met_rust_sad_gecko
   QC.Sty:
     repos:
       github.com/cessda/cessda.cmv.benchmark-runner checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.wine_cheerful_marmoset.sh
-        container: qc.sty_incarnadine_industrious_hippopotamus
+        - /usr/bin/env sh .sqa/script.claret_joyful_chimpanzee.sh
+        container: qc.sty_harlequin_impulsive_cobra
       github.com/cessda/cessda.cmv.benchmark-runner hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.paprika_pensive_panda.sh
-        container: qc.sty_viridian_industrious_caiman
+        - /usr/bin/env sh .sqa/script.snow_tactful_badger.sh
+        container: qc.sty_pink_focused_catfish
       github.com/cessda/cessda.cmv.benchmark-runner jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flint_spontaneous_crocodile.sh
-        container: qc.sty_plum_content_reindeer
+        - /usr/bin/env sh .sqa/script.fog_nervous_vulture.sh
+        container: qc.sty_boysenberry_confused_crane
   QC.Ver:
     repos:
       github.com/cessda/cessda.cmv.benchmark-runner get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bluebell_open_crocodile.sh
-        container: qc.ver_goldenrod_adventurous_unicorn
+        - /usr/bin/env sh .sqa/script.iris_smart_boa.sh
+        container: qc.ver_mulberry_decisive_ferret
 timeout: 5400
